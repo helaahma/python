@@ -21,6 +21,7 @@ def check_birthdate (year, month, day):
 
 	if  len (year)==4 and year.isnumeric() and len (month)<=2 and month.isnumeric() and len(day)<=2 and day.isnumeric() and check_birthdate(year, month, day)<=current_date and check_birthdate(year, month, day)>0:
 		#Check birth date is not in the future and additionally checks if date formate is correct
+
 		return True
 
 	
@@ -29,7 +30,7 @@ def check_birthdate (year, month, day):
 	else:
 		print ("False. You entered values with wrong format; please enter your date of birth again \n ")
 		year, month, day= input ("Please enter your birthdate here (YYYY-MM-DD) : \n").split()
-	return False
+		return False
 
 
 
