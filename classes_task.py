@@ -47,13 +47,16 @@ class Manager(Employee):
 
 
 
-name_list_employee=[]
-age_list_employee=[]
-salary_list_employee=[]
-years_list_employee=[]
-accumulate_employee=zip(name_list_employee, age_list_employee, salary_list_employee, years_list_employee)
-employees=[Employee(name,age,salary,year) for (name,age,salary, years) in accumulate_employee]
-
+"""
+For reference: 
+# name_list_employee=[]
+# age_list_employee=[]
+# salary_list_employee=[]
+# years_list_employee=[]
+# accumulate_employee=zip(name_list_employee, age_list_employee, salary_list_employee, years_list_employee)
+# employees=[Employee(name,age,salary,year) for (name,age,salary, years) in accumulate_employee]
+"""
+employees = []
 """
 Deleted but kept for my reference:
 
@@ -62,14 +65,18 @@ Deleted but kept for my reference:
 
 """
 
+"""
+For reference:
 name_list_manager=[]
 age_list_manager=[]
 salary_list_manager=[]
 years_list_manager=[]
 bonus_manager=[]
 accumulate_manager=zip(name_list_manager, age_list_manager, salary_list_manager, years_list_manager,bonus_manager)
-managers=[Employee(name,age,salary,year, percentage) for (name,age,salary,years, bonus_percentage) in accumulate_manager]
-#Welcome message
+managers=[Employee(name,age,salary,year, percentage) for (name,age,salary,years, bonus_percentage) in accumulate_manager]"""
+
+managers=[]
+#Welcome 
 print ("\t \n Welcome to HR Pro 2019\n")
 
 while True:
@@ -92,7 +99,7 @@ while True:
 
 	#similarly,  
 
-	elif (hr=="show managers" or hr=="2"):
+	elif (hr.lower()=="show managers" or hr=="2"):
 		
 		if len(managers)==0:
 			print ("\t Sorry, managers list is empty!\n")
@@ -102,7 +109,7 @@ while True:
 				print("\t", m)
 				print("")
 		
-	elif (hr=="add an employee" or hr=="3"):
+	elif (hr.lower()=="add an employee" or hr=="3"):
 		name_employee=input("Please enter the name: \n")
 		""" 
 		This is kept form my reference
@@ -133,7 +140,7 @@ while True:
 		
 
 
-	elif (hr=="add a manager" or hr=="4"):
+	elif (hr.lower()=="add a manager" or hr=="4"):
 		
 		name_manager=input("Please enter the manager's name: \n")
 		""" 
@@ -172,9 +179,12 @@ while True:
 			os.system('clear') #clear the terminal window before exiting
 			print ("Good buy!") 
 			quit() #exit()
-			
+		"""	
+		for reference:
 		else:
 
 			True #This will allow the program to  re-run (while loop power!)
+
+			No need!"""
 
 
